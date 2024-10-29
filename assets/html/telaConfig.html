@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações do Site</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/telaConfig.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/global.css">
+
+
+    
+</head>
+
+
+
+
+
+<body>
+
+    <div class="container mx-auto mt-10 p-8 bg-white shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold text-center mb-8 text-gray-700">Configurações do Site</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Tema -->
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-gray-600">Tema</h4>
+                <div class="relative">
+                    <label for="themeSelect" class="block text-gray-500">Escolha o tema:</label>
+                    <select id="themeSelect" class="w-full p-3 mt-2 bg-gray-100 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="light">Claro</option>
+                        <option value="dark">Escuro</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Notificações -->
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-gray-600">Notificações</h4>
+                <div class="relative">
+                    <label for="emailNotifications" class="block text-gray-500">Notificações por e-mail:</label>
+                    <select id="emailNotifications" class="w-full p-3 mt-2 bg-gray-100 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="enabled">Ativadas</option>
+                        <option value="disabled">Desativadas</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <!-- Privacidade -->
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-gray-600">Privacidade</h4>
+                <div class="flex items-center">
+                    <input type="checkbox" id="dataSharing" class="h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" checked>
+                    <label for="dataSharing" class="ml-3 text-gray-500">Compartilhar dados com parceiros</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="showProfile" class="h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" checked>
+                    <label for="showProfile" class="ml-3 text-gray-500">Mostrar meu perfil publicamente</label>
+                </div>
+            </div>
+
+            <!-- Botões de ação -->
+            <div class="flex flex-col justify-end space-y-4">
+                <button id="saveBtn" class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500">Salvar Configurações</button>
+                <a href="/assets/home.html" class="w-full text-center py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400">Voltar à Tela Inicial</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--start  rodapé-->
+<footer class="footer bg-light text-dark pt-5 pb-3">
+	<div class="container">
+		<div class="row">
+			<!-- Logo and About Section -->
+			<div class="col-lg-4 col-md-6 mb-4">
+				<h5 class="text-uppercase font-weight-bold">SportZone</h5>
+				<p>
+				
+					
+					<b>SportZone : Onde o conhecimento esportivo ganha força!</b>
+					!</p>
+			</div>
+			
+			<!-- Quick Links -->
+			<div class="col-lg-2 col-md-6 mb-4">
+				<h5 class="text-uppercase font-weight-bold">Links</h5>
+				<ul class="list-unstyled">
+					<li><a href="#" class="text-dark text-decoration-none">Home</a></li>
+					<li><a href="#" class="text-dark text-decoration-none">About</a></li>
+					<li><a href="#" class="text-dark text-decoration-none">Services</a></li>
+					<li><a href="#" class="text-dark text-decoration-none">Contact</a></li>
+				</ul>
+			</div>
+
+			<!-- Services -->
+			<div class="col-lg-3 col-md-6 mb-4">
+				<h5 class="text-uppercase font-weight-bold">Serviços</h5>
+				<ul class="list-unstyled">
+					<li><a href="#" class="text-dark text-decoration-none">Consulting</a></li>
+					<li><a href="#" class="text-dark text-decoration-none">Support</a></li>
+					<li><a href="#" class="text-dark text-decoration-none">Training</a></li>
+					<li><a href="#" class="text-dark text-decoration-none">Development</a></li>
+				</ul>
+			</div>
+		
+		</div>
+
+		<hr class="my-4">
+
+		<!-- Social Media and Copyright -->
+		<div class="row">
+			<div class="col-md-6">
+				<p>© 2024 SportZone. All rights reserved.</p>
+			</div>
+			<div class="col-md-6 text-end">
+				<a href="#" class="text-dark me-3"><i class="fab fa-facebook"></i></a>
+				<a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+				<a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+				<a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>	
+<!--end rodapé-->
+
+
+
+    <!-- JavaScript -->
+    <script src="/assets/js/telaConfig.js"></script>
+</body>
+</html>

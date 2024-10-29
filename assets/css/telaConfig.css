@@ -1,0 +1,13 @@
+/* estilos adicionais em telaConfig.css */
+body.bg-gray-900 {
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição de cores */
+}
+
+/* Exemplo de estilos para botões no modo escuro */
+.btn {
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

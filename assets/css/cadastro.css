@@ -28,21 +28,19 @@ margin-left: 50px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 1px 1px 1px 5px lightblue;
-    
-    
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 40px; /* Adiciona margem para criar espaço abaixo do cabeçalho */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
+  box-shadow: 1px 1px 1px 5px lightblue;
+}
+
   
   .title {
     font-size: 28px;
@@ -153,6 +151,10 @@ form {
   .submit:hover {
     background-color: rgb(56, 90, 194);
   }
+.input{
+  margin-bottom: 20px;
+}
+
   
   @keyframes pulse {
     from {
