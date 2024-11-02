@@ -32,77 +32,20 @@
     .favorite-btn.favorited {
       color: #ff0000;
     }
-    .compare-btn {
-      color: #007bff;
-      cursor: pointer;
-    }
-    #compareSection {
-      display: none;
-    }
     h2 {
       color: #007bff;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
-    
-    header {
-    background-color: #0f1ef1;
-    height: 60px;
-    border-bottom: 3px solid #00008B;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    position: relative;
-    box-shadow: 0 4px 2px -2px gray;
-}
-.search-bar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px; /* Defina uma largura para a barra de pesquisa */
-    display: flex;
-    align-items: center;
-}
-
-.search-bar input[type="search"] {
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-
-    .header-content h1 {
-      margin: 0;
-      color: white;
+    #compareSection {
+      margin-top: 20px;
+      display: none;
+      border: 1px solid #007bff;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #fff;
     }
-
-    header i {
-      color: white;
-      font-size: 30px;
-    }
-
-    .icons, .search-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Estilo da barra de pesquisa */
-    .search-bar input[type="search"] {
-      padding: 8px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 250px;
-    }
-
-    .search-bar button {
-      background-color: #007bff;
-      border: none;
-      padding: 8px 12px;
-      color: white;
-      cursor: pointer;
-      border-radius: 4px;
+    .compare-product {
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -127,13 +70,14 @@
   <h2 class="text-center mb-4 display-4">Setor de Camisas</h2>
 
   <div class="row">
-    <!-- Cards de Produtos -->
+    <!-- Cards de Produtos com Favoritar -->
     <div class="col-md-4 product-card" data-name="Camisa Azul">
       <div class="card bg-light">
         <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Azul">
         <div class="card-body">
           <h5 class="card-title">Camisa Azul</h5>
           <p class="card-text">Preço: R$ 150,00</p>
+          <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
         </div>
       </div>
     </div>
@@ -143,6 +87,7 @@
         <div class="card-body">
           <h5 class="card-title">Camisa Vermelha</h5>
           <p class="card-text">Preço: R$ 200,00</p>
+          <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
         </div>
       </div>
     </div>
@@ -152,10 +97,19 @@
         <div class="card-body">
           <h5 class="card-title">Camisa Verde</h5>
           <p class="card-text">Preço: R$ 180,00</p>
+          <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Seção de Comparação -->
+  <h2 class="text-center mb-4">Comparação de Produtos</h2>
+  <div id="compareSection">
+    <h4>Produtos Selecionados:</h4>
+    <div id="compareProducts"></div>
+  </div>
+  <button class="btn btn-primary" onclick="showComparison()">Comparar Produtos</button>
 </div>
 
 <script>
@@ -172,6 +126,41 @@
         card.style.display = 'none';
       }
     });
+  }
+
+  // Função para favoritar produtos
+  function toggleFavorite(element) {
+    element.classList.toggle('favorited');
+    const productName = element.closest('.product-card').getAttribute('data-name');
+    if (element.classList.contains('favorited')) {
+      addToComparison(productName);
+    } else {
+      removeFromComparison(productName);
+    }
+  }
+
+  const comparisonList = [];
+
+  function addToComparison(productName) {
+    if (!comparisonList.includes(productName)) {
+      comparisonList.push(productName);
+    }
+  }
+
+  function removeFromComparison(productName) {
+    const index = comparisonList.indexOf(productName);
+    if (index > -1) {
+      comparisonList.splice(index, 1);
+    }
+  }
+
+  function showComparison() {
+    const compareProducts = document.getElementById('compareProducts');
+    compareProducts.innerHTML = '';
+    comparisonList.forEach(product => {
+      compareProducts.innerHTML += `<div class="compare-product">${product}</div>`;
+    });
+    document.getElementById('compareSection').style.display = comparisonList.length > 0 ? 'block' : 'none';
   }
 </script>
 
