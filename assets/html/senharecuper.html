@@ -57,23 +57,7 @@
 
 
 
-    <script>
-        function loadNavbar() {
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'navbar.html', true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    document.getElementById('navbar-placeholder').innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
-        }
-    
-    
-        window.onload = loadNavbar;
-    </script>
-    
-
+    <script src="/assets/js/navbar.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     
