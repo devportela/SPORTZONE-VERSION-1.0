@@ -80,6 +80,7 @@
         border-radius: 20px;
         padding: 0 20px;
         display: block; /* O campo de entrada será exibido diretamente */
+        border: 1px solid lightblue;
     }
 
     .fa {
@@ -109,7 +110,28 @@
 
 
 
+    header {
+        background-color: #0f1ef1; /* Cor corrigida */
+        height: 60px;
+        border-bottom: 3px solid #00008B;
+        display: flex;
+        justify-content: center; /* Espaça o conteúdo */
+        align-items: center; /* Centraliza verticalmente */
+        padding: 0 20px; /* Espaçamento interno do cabeçalho */
+            box-shadow: 0 4px 2px -2px gray;
+            margin-bottom: 0;
 
+        
+    }
+
+    .header-content h1 {
+        margin: 0;
+        color: white;
+    
+    }
+
+    /* header end */
+    
 
 
 
@@ -122,14 +144,16 @@
   <div class="header-content">
     <h1>SPORTZONE</h1> 
   </div>
-  
-  <div class="search-bar">
-    <form onsubmit="searchProducts(); return false;">
-      <input type="search" id="searchInput" placeholder="Pesquise Aqui...">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
+ 
 </header>
+
+ 
+<div class="search-bar">
+  <form onsubmit="searchProducts(); return false;">
+    <input type="search" id="searchInput" placeholder="Pesquise Aqui...">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+</div>
 <!--end of header-->
 
 <div class="container my-5">
