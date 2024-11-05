@@ -1,0 +1,52 @@
+/* Footer Start */
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0; /* Reduzi um pouco o padding para que o footer fixo ocupe menos espaço */
+    color: #343a40;
+    position: fixed; /* Fixa o footer no fundo da página */
+    bottom: 0; /* Alinha o footer ao fundo */
+    left: 0;
+    width: 100%; /* Garante que o footer ocupe toda a largura da página */
+    z-index: 1000; /* Garante que o footer esteja acima de outros elementos */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+footer h5 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #343a40;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+footer .form-control {
+    border-radius: 0;
+}
+
+footer .btn-primary {
+    border-radius: 0;
+    background-color: #007bff;
+    border: none;
+}
+
+footer .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+footer hr {
+    border-top: 1px solid #dcdcdc;
+}
+
+/* Footer End */

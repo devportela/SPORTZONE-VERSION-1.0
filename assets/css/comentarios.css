@@ -17,14 +17,6 @@
 	--shadow: 8px 8px 30px rgba(0,0,0,.05);
 }
 
-body {
-	background: var(--light);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	padding: 1rem;
-}
 
 
 

@@ -1,0 +1,25 @@
+
+header {
+    background-color: #0f1ef1; /* Cor corrigida */
+    height: 60px;
+    border-bottom: 3px solid #00008B;
+    display: flex;
+    justify-content:center; /* Espaça o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 20px; /* Espaçamento interno do cabeçalho */
+    box-shadow: 0 4px 2px -2px gray;
+    top: 0;
+    left: 0;
+    width: 100%; /* Garante que ocupe toda a largura da tela */
+    z-index: 1000; /* Garante que o header fique sempre acima do conteúdo */
+}
+
+.header-content h1 {
+    margin: 0;
+    color: white;
+}
+
+/* Adiciona um espaço no topo do conteúdo para evitar que fique atrás do header */
+.content {
+    margin-top: 70px; /* Espaço suficiente para a altura do header */
+}
