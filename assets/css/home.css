@@ -1,14 +1,17 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins globalmente */
     
     }
     body{
-        background-color: #dbe7f1;
+        background-color:
     }
-
+/* inicialização web*/
 
 
 
@@ -90,26 +93,59 @@
 
 
     /* subheader end */
- 
+
+
+/* Estilos para o título chamativo */
+h2.display-4 {
+    color: #0f1ef1; /* Azul mais suave, já usado no restante do site */
+    font-size: 50px; /* Tamanho grande */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    margin-bottom: 20px;
+}
+
+/* Estilo para o temporizador */
+#timer {
+    font-size: 36px;
+    color: #ffffff;
+    background-color: #0f1ef1; /* Azul suave para combinar com o título */
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 50;
+}
+
+/* Efeito de transição no temporizador */
+#timer {
+    transition: all 0.3s ease-in-out;
+}
+
+#timer.expired {
+    background-color: #ff4500; /* Cor laranja-avermelhada para chamar a atenção */
+    color: #ffffff; /* Texto branco */
+}
+
 
 
 
     /*grid de produtos */
 
-
     
-
-
-    #first-card{
-    margin-bottom: 20px;
-    }
-
+        
+    
     .card {
-        background-color: white; /* Mantém neutro para destacar conteúdo */
+        width: 300px;              /* Defina uma largura fixa ou relativa */
+        margin-bottom: 20px;       /* Espaçamento entre os cards */
+        background-color: white;
         border: 1px solid #ddd;
         padding: 20px;
         border-radius: 10px;
     }
+    
+    #first-card{
+    margin-bottom: 20px;
+    }
+
 
     .card-text{
         margin-top:10px;
@@ -195,66 +231,17 @@
 
 
 
-    /* footer start*/
-
-
-    footer {
-        background-color: #f8f9fa;
-        padding: 50px 0;
-        color: #343a40;
-    }
-
-    .container{
-        margin-top: 50px;
-    }
-
-    footer h5 {
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
-
-    footer a {
-        color: #343a40;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-        color: #007bff;
-    }
-
-    footer .form-control {
-        border-radius: 0;
-    }
-
-    footer .btn-primary {
-        border-radius: 0;
-        background-color: #007bff;
-        border: none;
-    }
-
-    footer .btn-primary:hover {
-        background-color: #0056b3;
-    }
-
-    footer hr {
-        border-top: 1px solid #dcdcdc;
-    }
-
-    /*footer end*/
-
-
-
-
-
 
 
     .box-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100px;
-    }
+            display: flex;
+            justify-content: center;  /* Centraliza horizontalmente */
+            align-items: center;      /* Centraliza verticalmente */
+            padding-top: 100px;       /* Ajuste o padding se necessário */
+            height: 100vh;            /* Garantir que ocupe a altura total da tela */
+        }
+        
+    
     .slide-container{
         position: relative;
         width: 900px;
@@ -383,31 +370,145 @@
 
 
 
+/* Footer Styles */
+footer {
+    background-color: #0f1ef1; /* Azul escuro predominante */
+    color: white;
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
+}
 
-    /* footer start*/
-    footer {
-        background-color: #0f1ef1ef; 
-        height: 70px; 
-        width: 100%;
-        margin: fixed;
-        margin-top: 100px;
-        
-    }
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 50px;
+}
 
-    .footer-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
 
-    .footer-content p {
-        margin: 0;
-        color: aliceblue;
-    }
+.footer-column h5 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
 
-    .footer-container {
-        margin-top: 70px; 
-        
-    }
-    /* footer end*/
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+.footer-column p {
+    color: #d1d1d1;
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f1ef1;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-social-icons a:hover {
+    background-color: #ffffff;
+    color: #0f1ef1;
+}
+
+/* Email Subscription */
+.footer-column .subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e6e6e6;
+}
+
+.subscribe-form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #0f1ef1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form input[type="submit"]:hover {
+    background-color: #e6e6e6;
+}
+
+/* Certificações */
+.certifications img {
+    width: 80px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.certifications img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #1a2d9c;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
