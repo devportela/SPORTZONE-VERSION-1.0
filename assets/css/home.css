@@ -261,6 +261,7 @@
         height: 470px;
         border: 3px solid #ede6d6;
         box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+        border-radius: 5PX;
     }
     .slide-container .slides{
         width: 100%;
@@ -325,43 +326,61 @@
     .dotsContainer .active{
         background-color: #555;
     }
+/* Configurações básicas para os slides */
+.slides {
+    position: relative;
+    overflow: hidden; /* Esconde as imagens que estão fora da tela */
+    width: 100%; /* Ajuste a largura de acordo com seu layout */
+}
 
+.slides img {
+    position: absolute;
+    width: 100%;
+    left: 100%; /* Todas as imagens começam fora da tela */
+}
 
+.slides img.active {
+    left: 0; /* Apenas o slide ativo deve estar visível */
+}
 
-
-    @keyframes next1{
-        from{
-            left: 0%
-        }
-        to{
-            left: -100%;
-        }
+/* Animações de deslizamento para o próximo slide */
+@keyframes next1 {
+    from {
+        left: 0%;
     }
-    @keyframes next2{
-        from{
-            left: 100%
-        }
-        to{
-            left: 0%;
-        }
+    to {
+        left: -100%; /* Desliza a imagem atual para fora da tela (à esquerda) */
     }
+}
 
-    @keyframes prev1{
-        from{
-            left: 0%
-        }
-        to{
-            left: 100%;
-        }
+@keyframes next2 {
+    from {
+        left: 100%; /* Próxima imagem começa fora da tela (à direita) */
     }
-    @keyframes prev2{
-        from{
-            left: -100%
-        }
-        to{
-            left: 0%;
-        }
+    to {
+        left: 0%; /* E desliza para dentro da tela */
     }
+}
+
+/* Animações de deslizamento para o slide anterior */
+@keyframes prev1 {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 100%; /* Desliza a imagem atual para fora da tela (à direita) */
+    }
+}
+
+@keyframes prev2 {
+    from {
+        left: -100%; /* Imagem anterior começa fora da tela (à esquerda) */
+    }
+    to {
+        left: 0%; /* E desliza para dentro da tela */
+    }
+}
+
 
 
 
