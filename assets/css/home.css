@@ -443,6 +443,7 @@ footer {
     color: #0f1ef1;
     font-size: 20px;
     transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
 }
 
 .footer-social-icons a:hover {
@@ -450,34 +451,7 @@ footer {
     color: #0f1ef1;
 }
 
-/* Email Subscription */
-.footer-column .subscribe-form {
-    display: flex;
-    flex-direction: column;
-}
 
-.subscribe-form input[type="email"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #e6e6e6;
-}
-
-.subscribe-form input[type="submit"] {
-    padding: 10px;
-    border: none;
-    background-color: #ffffff;
-    color: #0f1ef1;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.subscribe-form input[type="submit"]:hover {
-    background-color: #e6e6e6;
-}
 
 /* Certificações */
 .certifications img {
@@ -512,3 +486,4 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+

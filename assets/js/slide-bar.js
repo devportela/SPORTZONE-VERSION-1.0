@@ -46,7 +46,7 @@ let deletInterval;  // Declare a variable to hold the interval ID.
 function autoSliding(){
     // Only set the interval if it's not already running.
     if (!deletInterval) {
-        deletInterval = setInterval(timer, 6000);  // Adjusted to 6 seconds (6000 ms)
+        deletInterval = setInterval(timer, 4000);  // Adjusted to 6 seconds (6000 ms)
     }
 }
 
