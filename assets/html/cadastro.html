@@ -21,8 +21,7 @@
    
 <div id="navbar-placeholder"></div>
 
-
-  <form class="form text-center">
+<div class="box">  <form class="form text-center">
     <p class="title">CADASTRO DE USUÁRIOS</p>
     <p class="message"> </p>
     <div class="box">
@@ -68,11 +67,43 @@
     </div>
 </form>
 
+</div>
 
 
 <div id="footer"></div>
 
-<script src="/assets/js/footer.js"></script>
-<script src="/assets/js/navbar.js"></script>
+ <!-- Navbar Script -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar a navbar: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    });
+</script>
+
+<!-- Footer Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/assets/html/footer.html') // Certifique-se que o caminho do arquivo footer.html está correto
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o footer: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    });
+</script>
 </body>
 </html>
