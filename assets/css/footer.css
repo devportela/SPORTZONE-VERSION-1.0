@@ -1,52 +1,143 @@
-/* Footer Start */
 
+/* Footer Styles */
 footer {
-    background-color: #f8f9fa;
-    padding: 20px 0; /* Reduzi um pouco o padding para que o footer fixo ocupe menos espaço */
-    color: #343a40;
-    position: fixed; /* Fixa o footer no fundo da página */
-    bottom: 0; /* Alinha o footer ao fundo */
-    left: 0;
-    width: 100%; /* Garante que o footer ocupe toda a largura da página */
-    z-index: 1000; /* Garante que o footer esteja acima de outros elementos */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    background-color: #0f1ef1; /* Azul escuro predominante */
+    color: white;
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    margin-top: 50px;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 50px;
 }
 
-footer h5 {
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-column h5 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
     text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+.footer-column p {
+    color: #d1d1d1;
     margin-bottom: 20px;
 }
 
-footer a {
-    color: #343a40;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Social Icons */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
 }
 
-footer a:hover {
-    color: #007bff;
+.footer-social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f1ef1;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-footer .form-control {
-    border-radius: 0;
+.footer-social-icons a:hover {
+    background-color: #ffffff;
+    color: #0f1ef1;
 }
 
-footer .btn-primary {
-    border-radius: 0;
-    background-color: #007bff;
+/* Email Subscription */
+.footer-column .subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e6e6e6;
 }
 
-footer .btn-primary:hover {
-    background-color: #0056b3;
+.subscribe-form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #0f1ef1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-footer hr {
-    border-top: 1px solid #dcdcdc;
+.subscribe-form input[type="submit"]:hover {
+    background-color: #e6e6e6;
 }
 
-/* Footer End */
+/* Certificações */
+.certifications img {
+    width: 80px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.certifications img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #1a2d9c;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}

@@ -1,13 +1,11 @@
-function loadFooter() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'footer.html', true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('footer-placeholder').innerHTML = xhr.responseText;
-        }
-    };
-    xhr.send();
-}
+  // Função para carregar o footer
+    function loadFooter() {
+        fetch('footer.html') // Caminho para o arquivo footer.html
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    }
 
-
-window.onload = loadFooter;
+    // Carregar o footer quando a página for carregada
+    window.onload = loadFooter;

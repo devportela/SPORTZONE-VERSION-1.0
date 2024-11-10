@@ -7,18 +7,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="/assets/img/logo/logo50x50.jpg" type="image/x-icon">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
-            background-color: #f8f9fa; /* Cor de fundo suave */
+            background-color: #f8f9fa;
         }
         .header-content {
             text-align: center;
@@ -26,9 +21,9 @@
         }
         .polit {
             max-width: 800px;
-            margin: 0 auto; /* Centraliza a div da política */
+            margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff; /* Fundo branco para a seção da política */
+            background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
@@ -37,11 +32,11 @@
             margin-top: 20px;
         }
     </style>
-
 </head>
 <body>
 
-    <div id="navbar-placeholder"></div>
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>>
 
     <div class="container polit">
         <h2>Política de Privacidade</h2>
@@ -79,10 +74,46 @@
             <a href="/assets/html/cadastro.html" class="btn btn-primary">Voltar para Cadastro</a>
         </div>
     </div>
+    <!-- Placeholder for Footer -->
+    <div id="footer"></div>
 
-    
-    <script src="/assets/js/navbar.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Scripts to load Navbar and Footer -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar a navbar: ' + response.status);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+        });
+    </script>
+
+    <!-- Footer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/assets/html/footer.html') // Certifique-se que o caminho do arquivo footer.html está correto
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o footer: ' + response.status);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+        });
+    </script>
+
 </body>
 </html>
