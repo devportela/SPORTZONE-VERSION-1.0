@@ -1,4 +1,9 @@
 /* estilos adicionais em telaConfig.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins globalmente */
+}
 body.bg-gray-900 {
     transition: background-color 0.3s, color 0.3s; /* Suaviza a transição de cores */
 }

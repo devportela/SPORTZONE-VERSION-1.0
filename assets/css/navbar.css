@@ -23,3 +23,44 @@ header {
 .content {
     margin-top: 70px; /* Espaço suficiente para a altura do header */
 }
+
+/* Estilizando o header */
+.header-content {
+    display: flex;
+    justify-content: flex-start; /* Coloca o título à esquerda */
+    align-items: center; /* Alinha verticalmente */
+    padding: 20px;
+}
+
+/* Estilizando o link com o ícone */
+.home-link {
+    position: absolute; /* Muda para position absolute */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    color: white; /* Cor do ícone e texto em branco */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto verticalmente */
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Estilizando o ícone */
+.home-link i {
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+/* Mudando a cor ao passar o mouse */
+.home-link:hover {
+    color: #cccccc; /* Cor mais clara no hover */
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 600px) {
+    .home-link {
+        font-size: 16px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+    .home-link i {
+        font-size: 20px; /* Reduz o tamanho do ícone em telas pequenas */
+    }
+}

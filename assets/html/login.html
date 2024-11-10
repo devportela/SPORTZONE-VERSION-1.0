@@ -20,11 +20,8 @@
 </head>
 <body>
 
-    <header>
-        <div class="header-content">
-           <h1>SPORTZONE</h1> 
-        </div> 
-    </header>
+   <div id="navbar-placeholder"></div>
+
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="login-box bg-white rounded-lg shadow p-4" style="width: 400px;">
@@ -52,7 +49,40 @@
 
     <div id="footer"></div>
 
+         <!-- Navbar Script -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar a navbar: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    });
+</script>
 
-    <script src="/assets/js/footer.js"></script>
+<!-- Footer Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/assets/html/footer.html') // Certifique-se que o caminho do arquivo footer.html está correto
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o footer: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    });
+</script>
+
+
 </body>
 </html>

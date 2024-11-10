@@ -1,260 +1,219 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Setor de Produtos - SportZone</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="/assets/img/logo/logo50x50.jpg" type="image/x-icon">
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setor de Produtos - SportZone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/logo/logo50x50.jpg" type="image/x-icon">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    body {
-      background-color: #f0f8ff;
-      font-family: 'Poppins', sans-serif;
-    }
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid #e0e0e0;
-      border-radius: 15px;
-    }
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-    }
-    .favorite-btn {
-      color: #ff6347;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    .favorite-btn.favorited {
-      color: #ff0000;
-    }
-    h2 {
-      color: #007bff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    #compareSection {
-      margin-top: 20px;
-      display: none;
-      border: 1px solid #007bff;
-      padding: 15px;
-      border-radius: 10px;
-      background-color: #fff;
-    }
-    .compare-product {
-      margin-bottom: 15px;
-    }
-
-
-    
-
-    /* search-bar */
-    form {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 1s;
-        width: 500px; /* Defina a largura completa aqui */
-        height: 50px;
-        background: white;
-        box-sizing: border-box;
-        border-radius: 25px;
-        border: 4px solid white;
-        padding: 5px;
-    }
-
-    input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 42.5px;
-        line-height: 30px;
-        outline: 0;
-        border: 0;
-        font-size: 1em;
-        border-radius: 20px;
-        padding: 0 20px;
-        display: block; /* O campo de entrada será exibido diretamente */
-        border: 1px solid lightblue;
-    }
-
-    .fa {
-        box-sizing: border-box;
-        padding: 10px;
-        width: 42.5px;
-        height: 42.5px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-radius: 50%;
-        color: #8c52ff;
-        text-align: center;
-        font-size: 1.2em;
-        transition: all 1s;
-        background: #8c52ff; /* Cor de fundo do ícone já definida */
-        color: white;
-    }
-
-    /* Remova o efeito de hover */
-
-
-    .search-bar{
-        margin-top: 50px;
-    }
-    /*end search bar */
-
-
-
-    header {
-        background-color: #0f1ef1; /* Cor corrigida */
-        height: 60px;
-        border-bottom: 3px solid #00008B;
-        display: flex;
-        justify-content: center; /* Espaça o conteúdo */
-        align-items: center; /* Centraliza verticalmente */
-        padding: 0 20px; /* Espaçamento interno do cabeçalho */
-            box-shadow: 0 4px 2px -2px gray;
-            margin-bottom: 0;
-
-        
-    }
-
-    .header-content h1 {
-        margin: 0;
-        color: white;
-    
-    }
-
-    /* header end */
-    
-
-
-
-  </style>
-</head>
-<body>
-
-<!--start header-->
-<header>
-  <div class="header-content">
-    <h1>SPORTZONE</h1> 
-  </div>
- 
-</header>
-
- 
-<div class="search-bar">
-  <form onsubmit="searchProducts(); return false;">
-    <input type="search" id="searchInput" placeholder="Pesquise Aqui...">
-    <button type="submit"><i class="fa fa-search"></i></button>
-  </form>
-</div>
-<!--end of header-->
-
-<div class="container my-5">
-  <h2 class="text-center mb-4 display-4">Setor de Camisas</h2>
-
-  <div class="row">
-    <!-- Cards de Produtos com Favoritar -->
-    <div class="col-md-4 product-card" data-name="Camisa Azul">
-      <div class="card bg-light">
-        <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Azul">
-        <div class="card-body">
-          <h5 class="card-title">Camisa Azul</h5>
-          <p class="card-text">Preço: R$ 150,00</p>
-          <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 product-card" data-name="Camisa Vermelha">
-      <div class="card bg-light">
-        <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Vermelha">
-        <div class="card-body">
-          <h5 class="card-title">Camisa Vermelha</h5>
-          <p class="card-text">Preço: R$ 200,00</p>
-          <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 product-card" data-name="Camisa Verde">
-      <div class="card bg-light">
-        <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-        <div class="card-body">
-          <h5 class="card-title">Camisa Verde</h5>
-          <p class="card-text">Preço: R$ 180,00</p>
-          <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Seção de Comparação -->
-  <h2 class="text-center mb-4">Comparação de Produtos</h2>
-  <div id="compareSection">
-    <h4>Produtos Selecionados:</h4>
-    <div id="compareProducts"></div>
-  </div>
-  <button class="btn btn-primary" onclick="showComparison()">Comparar Produtos</button>
-</div>
-
-<script>
-  // Função para pesquisar produtos
-  function searchProducts() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const productCards = document.querySelectorAll('.product-card');
-
-    productCards.forEach(card => {
-      const productName = card.getAttribute('data-name').toLowerCase();
-      if (productName.includes(searchInput)) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
+    <style>
+      body {
+        background-color: #f0f8ff;
+        font-family: 'Poppins', sans-serif;
       }
-    });
-  }
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #e0e0e0;
+        border-radius: 15px;
+      }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      .favorite-btn {
+        color: #ff6347;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      .favorite-btn.favorited {
+        color: #ff0000;
+      }
+      h2 {
+        color: #007bff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      #compareSection {
+        margin-top: 20px;
+        display: none;
+        border: 1px solid #007bff;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+      .compare-product {
+        margin-bottom: 15px;
+      }
 
-  // Função para favoritar produtos
-  function toggleFavorite(element) {
-    element.classList.toggle('favorited');
-    const productName = element.closest('.product-card').getAttribute('data-name');
-    if (element.classList.contains('favorited')) {
-      addToComparison(productName);
-    } else {
-      removeFromComparison(productName);
-    }
-  }
 
-  const comparisonList = [];
+      
 
-  function addToComparison(productName) {
-    if (!comparisonList.includes(productName)) {
-      comparisonList.push(productName);
-    }
-  }
+      /* search-bar */
+      form {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 1s;
+          width: 500px; /* Defina a largura completa aqui */
+          height: 50px;
+          background: white;
+          box-sizing: border-box;
+          border-radius: 25px;
+          border: 4px solid white;
+          padding: 5px;
+      }
 
-  function removeFromComparison(productName) {
-    const index = comparisonList.indexOf(productName);
-    if (index > -1) {
-      comparisonList.splice(index, 1);
-    }
-  }
+      input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 42.5px;
+          line-height: 30px;
+          outline: 0;
+          border: 0;
+          font-size: 1em;
+          border-radius: 20px;
+          padding: 0 20px;
+          display: block; /* O campo de entrada será exibido diretamente */
+          border: 1px solid lightblue;
+      }
 
-  function showComparison() {
-    const compareProducts = document.getElementById('compareProducts');
-    compareProducts.innerHTML = '';
-    comparisonList.forEach(product => {
-      compareProducts.innerHTML += `<div class="compare-product">${product}</div>`;
-    });
-    document.getElementById('compareSection').style.display = comparisonList.length > 0 ? 'block' : 'none';
-  }
-</script>
+      .fa {
+          box-sizing: border-box;
+          padding: 10px;
+          width: 42.5px;
+          height: 42.5px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 50%;
+          color: #8c52ff;
+          text-align: center;
+          font-size: 1.2em;
+          transition: all 1s;
+          background: #8c52ff; /* Cor de fundo do ícone já definida */
+          color: white;
+      }
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+      /* Remova o efeito de hover */
+
+
+      .search-bar{
+          margin-top: 50px;
+      }
+      /*end search bar */
+
+
+    </style>
+  </head>
+  <body>
+
+    <div id="navbar-placeholder"></div>
+
+  
+  <div class="search-bar">
+    <form onsubmit="searchProducts(); return false;">
+      <input type="search" id="searchInput" placeholder="Pesquise Aqui...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <!--end of header-->
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4 display-4">Setor de Camisas</h2>
+
+    <div class="row">
+      <!-- Cards de Produtos com Favoritar -->
+      <div class="col-md-4 product-card" data-name="Camisa Azul">
+        <div class="card bg-light">
+          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Azul">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Azul</h5>
+            <p class="card-text">Preço: R$ 150,00</p>
+            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 product-card" data-name="Camisa Vermelha">
+        <div class="card bg-light">
+          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Vermelha">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Vermelha</h5>
+            <p class="card-text">Preço: R$ 200,00</p>
+            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 product-card" data-name="Camisa Verde">
+        <div class="card bg-light">
+          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Verde</h5>
+            <p class="card-text">Preço: R$ 180,00</p>
+            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de Comparação -->
+    <h2 class="text-center mb-4">Comparação de Produtos</h2>
+    <div id="compareSection">
+      <h4>Produtos Selecionados:</h4>
+      <div id="compareProducts"></div>
+    </div>
+    <button class="btn btn-primary" onclick="showComparison()">Comparar Produtos</button>
+  </div>
+
+
+
+  <div id="footer"></div>
+
+
+      <!-- Navbar Script -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar a navbar: ' + response.status);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+        });
+    </script>
+    
+    <!-- Footer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/assets/html/footer.html') // Certifique-se que o caminho do arquivo footer.html está correto
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o footer: ' + response.status);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+        });
+    </script>
+
+
+
+
+<script src="/assets/js/camisas.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+  </html>
