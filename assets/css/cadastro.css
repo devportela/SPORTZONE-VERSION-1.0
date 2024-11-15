@@ -4,32 +4,12 @@ body{
   padding: 0;
   font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins globalmente */
 }
-header {
-  background-color: #0f1ef1ef;
-  height: 50px;
 
-  border-bottom: 3px solid #00008B;
-}
 h1{
   color:white;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 
-margin-left: 50px;    
-}
-
-.logo-site{
-  margin-left: 20px;
-}
-
-.box{
-  margin-bottom: 50px;
-}
 
 form {
   display: flex;

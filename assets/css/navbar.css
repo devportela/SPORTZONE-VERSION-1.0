@@ -1,66 +1,91 @@
-
+/* Header start */
 header {
     background-color: #0f1ef1; /* Cor corrigida */
     height: 60px;
     border-bottom: 3px solid #00008B;
     display: flex;
-    justify-content:center; /* Espaça o conteúdo */
+    justify-content: space-between; /* Espaça o conteúdo */
     align-items: center; /* Centraliza verticalmente */
     padding: 0 20px; /* Espaçamento interno do cabeçalho */
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 2px -2px gray; /* Sombra para dar destaque */
+    margin-bottom: 0;
+}
+
+header .header-content h1 {
+    margin: 0;
+    color: white; /* Texto do título em branco */
+}
+
+header i {
+    color: white; /* Mantém os ícones visíveis */
+    padding: 0 10px;
+    font-size: 30px; /* Ajuste do tamanho dos ícones */
+}
+
+header .icons,
+header .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .icons {
+    order: 2; /* Posicionar os ícones depois */
+}
+
+/* Header end */
+
+
+
+   /* Search-bar start */
+header .search-bar form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    width: 500px; /* Defina a largura completa aqui */
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px; 
+}
+
+header .search-bar input {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Garante que ocupe toda a largura da tela */
-    z-index: 1000; /* Garante que o header fique sempre acima do conteúdo */
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+    display: block; /* O campo de entrada será exibido diretamente */
 }
 
-.header-content h1 {
-    margin: 0;
-    color: white;
+header .fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #8c52ff;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+    background: #8c52ff; /* Cor de fundo do ícone */
+    color: white; /* Mantém o ícone branco */
 }
 
-/* Adiciona um espaço no topo do conteúdo para evitar que fique atrás do header */
-.content {
-    margin-top: 70px; /* Espaço suficiente para a altura do header */
+header .search-bar {
+    margin-top: 50px;
 }
-
-/* Estilizando o header */
-.header-content {
-    display: flex;
-    justify-content: flex-start; /* Coloca o título à esquerda */
-    align-items: center; /* Alinha verticalmente */
-    padding: 20px;
-}
-
-/* Estilizando o link com o ícone */
-.home-link {
-    position: absolute; /* Muda para position absolute */
-    top: 20px; /* Distância do topo */
-    right: 20px; /* Distância da direita */
-    color: white; /* Cor do ícone e texto em branco */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 18px; /* Tamanho da fonte */
-    display: flex;
-    align-items: center; /* Alinha o ícone e o texto verticalmente */
-    gap: 8px; /* Espaçamento entre o ícone e o texto */
-}
-
-/* Estilizando o ícone */
-.home-link i {
-    font-size: 24px; /* Tamanho do ícone */
-}
-
-/* Mudando a cor ao passar o mouse */
-.home-link:hover {
-    color: #cccccc; /* Cor mais clara no hover */
-}
-
-/* Ajuste para dispositivos móveis */
-@media (max-width: 600px) {
-    .home-link {
-        font-size: 16px; /* Reduz o tamanho da fonte em telas pequenas */
-    }
-    .home-link i {
-        font-size: 20px; /* Reduz o tamanho do ícone em telas pequenas */
-    }
-}
+/* Search-bar end */

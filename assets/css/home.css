@@ -10,6 +10,7 @@
     }
     body{
        font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins globalmente */
+       background-color: #dbe7f1;;
     }
 /* inicialização web*/
 
@@ -93,39 +94,6 @@
 
 
     /* subheader end */
-
-
-/* Estilos para o título chamativo */
-h2.display-4 {
-    color: #0f1ef1; /* Azul mais suave, já usado no restante do site */
-    font-size: 50px; /* Tamanho grande */
-    text-transform: uppercase;
-    letter-spacing: 2px; /* Espaçamento entre as letras */
-    margin-bottom: 20px;
-}
-
-/* Estilo para o temporizador */
-#timer {
-    font-size: 36px;
-    color: #ffffff;
-    background-color: #0f1ef1; /* Azul suave para combinar com o título */
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    width: 50;
-}
-
-/* Efeito de transição no temporizador */
-#timer {
-    transition: all 0.3s ease-in-out;
-}
-
-#timer.expired {
-    background-color: #ff4500; /* Cor laranja-avermelhada para chamar a atenção */
-    color: #ffffff; /* Texto branco */
-}
-
-
 
 
     /*grid de produtos */
