@@ -1,303 +1,244 @@
-  <!DOCTYPE html>
-  <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setor de Produtos - SportZone</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/img/logo/logo50x50.jpg" type="image/x-icon">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-      body {
-        background-color: #f0f8ff;
-        font-family: 'Poppins', sans-serif;
-      }
-      .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #e0e0e0;
-        border-radius: 15px;
-      }
-      .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-      }
-      .favorite-btn {
-        color: #ff6347;
-        cursor: pointer;
-        transition: color 0.3s;
-      }
-      .favorite-btn.favorited {
-        color: #ff0000;
-      }
-      h2 {
-        color: #007bff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      #compareSection {
-        margin-top: 20px;
-        display: none;
-        border: 1px solid #007bff;
-        padding: 15px;
-        border-radius: 10px;
-        background-color: #fff;
-      }
-      .compare-product {
-        margin-bottom: 15px;
-      }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibição de Produtos</title>
+  <link rel="stylesheet" href="/assets/css/SetorCamisas.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+   
+  </style>
+</head>
+<body>
 
 
-      
-
-      /* search-bar */
-      form {
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          transition: all 1s;
-          width: 500px; /* Defina a largura completa aqui */
-          height: 50px;
-          background: white;
-          box-sizing: border-box;
-          border-radius: 25px;
-          border: 4px solid white;
-          padding: 5px;
-      }
-
-      input {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 42.5px;
-          line-height: 30px;
-          outline: 0;
-          border: 0;
-          font-size: 1em;
-          border-radius: 20px;
-          padding: 0 20px;
-          display: block; /* O campo de entrada será exibido diretamente */
-          border: 1px solid lightblue;
-      }
-
-      .fa {
-          box-sizing: border-box;
-          padding: 10px;
-          width: 42.5px;
-          height: 42.5px;
-          position: absolute;
-          top: 0;
-          right: 0;
-          border-radius: 50%;
-          color: #8c52ff;
-          text-align: center;
-          font-size: 1.2em;
-          transition: all 1s;
-          background: #8c52ff; /* Cor de fundo do ícone já definida */
-          color: white;
-      }
-
-      /* Remova o efeito de hover */
 
 
-      .search-bar{
-          margin-top: 50px;
-      }
-      /*end search bar */
+
+<div id="navbar-placeholder"></div>
 
 
-    </style>
-  </head>
-  <body>
+<div class="search-bar">
+  <form onsubmit="searchProducts(); return false;">
+    <input type="search" id="searchInput" placeholder="Pesquise Aqui...">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+</div>
 
-    <div id="navbar-placeholder"></div>
 
-  
-  <div class="search-bar">
-    <form onsubmit="searchProducts(); return false;">
-      <input type="search" id="searchInput" placeholder="Pesquise Aqui...">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
-  <!--end of header-->
 
-  <div class="container my-5">
-    <h2 class="text-center mb-4 display-4">Setor de Camisas</h2>
 
-    <div class="row">
-      <!-- Cards de Produtos com Favoritar -->
-      <div class="col-md-4 product-card" data-name="Camisa Azul">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Azul">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Azul</h5>
-            <p class="card-text">Preço: R$ 150,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Vermelha">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Vermelha">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Vermelha</h5>
-            <p class="card-text">Preço: R$ 200,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Bege">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Bege">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Bege</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
+  <!-- Ícone do carrinho -->
+  <div class="cart-icon">🛒</div>
+
+  <div class="row product-row">
+    <!-- Produto 1 -->
+    <div class="col-md-4 product-card">
+      <div class="card bg-light">
+        <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top img-zoom product-image" alt="Camisa Azul">
+        <div class="card-body">
+          <h5 class="card-title">Camisa Azul</h5>
+          <p class="card-text">Preço: R$ 150,00</p>
+          <button class="btn btn-success add-to-cart" onclick="addToCart(this, '/assets/img/CamisaCorinthians/frente.png')">Adicionar ao Carrinho</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="showProductDetails('Camisa Azul', 150, '/assets/img/CamisaCorinthians/frente.png')">Ver mais detalhes</button>
+         
         </div>
       </div>
     </div>
 
-    <!-- Seção de Comparação -->
-    <h2 class="text-center mb-4">Comparação de Produtos</h2>
-    <div id="compareSection">
-      <h4>Produtos Selecionados:</h4>
+    <!-- Produto 2 -->
+    <div class="col-md-4 product-card">
+      <div class="card bg-light">
+        <img src="/assets/img/CamisaCorinthians/verso.png" class="card-img-top img-zoom product-image" alt="Camisa Preta">
+        <div class="card-body">
+          <h5 class="card-title">Camisa Preta</h5>
+          <p class="card-text">Preço: R$ 180,00</p>
+          <button class="btn btn-success add-to-cart" onclick="addToCart(this, '/assets/img/CamisaCorinthians/verso.png')">Adicionar ao Carrinho</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="showProductDetails('Camisa Preta', 180, '/assets/img/CamisaCorinthians/verso.png')">Ver mais detalhes</button>
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="col-md-4 product-card">
+      <div class="card bg-light">
+        <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top img-zoom product-image" alt="Camisa Vermelha">
+        <div class="card-body">
+          <h5 class="card-title">Camisa Vermelha</h5>
+          <p class="card-text">Preço: R$ 200,00</p>
+          <button class="btn btn-success add-to-cart" onclick="addToCart(this, '/assets/img/CamisaCorinthians/frente.png')">Adicionar ao Carrinho</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="showProductDetails('Camisa Vermelha', 200, '/assets/img/CamisaCorinthians/frente.png')">Ver mais detalhes</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Seção de comparação -->
+    <div id="compareSection" class="mt-5">
+      <h3>Comparação de Produtos</h3>
       <div id="compareProducts"></div>
+      <button class="btn btn-primary" onclick="showComparison()">Comparar</button>
     </div>
-    <button class="btn btn-primary" onclick="showComparison()">Comparar Produtos</button>
-  </div>
 
+    <!-- Modal de visualização rápida -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel">Detalhes do Produto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalProductImage" src="" alt="Produto" class="img-fluid">
+            <h5 id="modalProductTitle"></h5>
+            <p>Preço: R$ <span id="modalProductPrice"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-success">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabela de comparação (quando o botão "Comparar" for clicado) -->
+    <div id="comparisonTable" class="mt-5">
+      <h3>Tabela de Comparação</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Detalhes</th>
+          </tr>
+        </thead>
+        <tbody id="compareProductsBody"></tbody>
+      </table>
+    </div>
+  </div>
 
 
   <div id="footer"></div>
 
 
-      <!-- Navbar Script -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao carregar a navbar: ' + response.status);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error(error));
+   <!-- Navbar Script -->
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar a navbar: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    });
+</script>
+
+<!-- Footer Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/assets/html/footer.html') // Certifique-se que o caminho do arquivo footer.html está correto
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o footer: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    });
+</script>
+
+
+  <script>
+    let productsToCompare = [];
+
+    // Função de adicionar ao carrinho com animação
+    function addToCart(button, imgSrc) {
+      let cartIcon = document.querySelector('.cart-icon'); // Substitua pelo seletor do ícone do carrinho
+
+      // Criar uma cópia da imagem do produto
+      let imgClone = document.createElement('img');
+      imgClone.src = imgSrc;
+      imgClone.style.position = 'fixed';
+      imgClone.style.top = button.getBoundingClientRect().top + 'px';
+      imgClone.style.left = button.getBoundingClientRect().left + 'px';
+      imgClone.style.width = '50px';
+      imgClone.style.height = '50px';
+      imgClone.style.zIndex = '1000';
+      imgClone.style.transition = 'all 1s';
+
+      document.body.appendChild(imgClone);
+
+      // Animação da imagem até o ícone do carrinho
+      setTimeout(function() {
+        imgClone.style.top = cartIcon.getBoundingClientRect().top + 'px';
+        imgClone.style.left = cartIcon.getBoundingClientRect().left + 'px';
+        imgClone.style.width = '20px';
+        imgClone.style.height = '20px';
+      }, 100);
+
+      // Remover a imagem após a animação
+      setTimeout(function() {
+        document.body.removeChild(imgClone);
+      }, 1000);
+    }
+
+    // Função de exibir os detalhes do produto no modal
+    function showProductDetails(title, price, imgSrc) {
+      document.getElementById('modalProductTitle').innerText = title;
+      document.getElementById('modalProductPrice').innerText = price;
+      document.getElementById('modalProductImage').src = imgSrc;
+    }
+
+    // Função de adicionar/remover produtos para comparação
+    function toggleCompare(checkbox, name, price) {
+      if (checkbox.checked) {
+        productsToCompare.push({ name, price });
+      } else {
+        productsToCompare = productsToCompare.filter(product => product.name !== name);
+      }
+      updateCompareSection();
+    }
+
+    // Função de atualizar a seção de comparação
+    function updateCompareSection() {
+      let compareSection = document.getElementById('compareSection');
+      let compareProducts = document.getElementById('compareProducts');
+      compareProducts.innerHTML = '';
+      
+      if (productsToCompare.length > 0) {
+        productsToCompare.forEach(product => {
+          compareProducts.innerHTML += `<p>${product.name} - R$ ${product.price}</p>`;
         });
-    </script>
-    
-    <!-- Footer Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/assets/html/footer.html') // Certifique-se que o caminho do arquivo footer.html está correto
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao carregar o footer: ' + response.status);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => console.error(error));
-        });
-    </script>
+        compareSection.style.display = 'block';
+      } else {
+        compareSection.style.display = 'none';
+      }
+    }
+
+    // Função de exibir a tabela de comparação
+    function showComparison() {
+      let comparisonTableBody = document.getElementById('compareProductsBody');
+      comparisonTableBody.innerHTML = '';
+      productsToCompare.forEach(product => {
+        comparisonTableBody.innerHTML += `<tr>
+          <td>${product.name}</td>
+          <td>R$ ${product.price}</td>
+          <td>Detalhes do Produto</td>
+        </tr>`;
+      });
+    }
+  </script>
+
 
 
 
@@ -305,5 +246,6 @@
 <script src="/assets/js/camisas.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -71,6 +71,7 @@
     .container{
         margin-bottom: 50px;
         margin-left: 163px;
+        
     }
 
     .navbar {
@@ -86,6 +87,8 @@
         font-weight: 600; /* Aumenta o peso da fonte */
         color: #0f1ef1; /* Cor personalizada dos links */
         transition: color 0.3s; /* Transição suave para a cor */
+        margin-top: 50px;
+        
     }
     
     .navbar-nav .nav-link:hover {
