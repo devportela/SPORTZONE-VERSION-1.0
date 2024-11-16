@@ -102,8 +102,37 @@
     /*grid de produtos */
 
     
-        
     
+
+    .card-title {
+        font-size: 1.4rem; /* Tamanho maior para chamar atenção */
+        font-weight: bold; /* Negrito para destacar */
+        color: #0056b3; /* Um azul mais vibrante */
+        text-align: center; /* Centralizado */
+        text-transform: uppercase; /* Todas as letras maiúsculas */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Leve sombra para efeito 3D */
+        margin-bottom: 15px; /* Espaçamento para separação do texto */
+    }
+    .card-title:hover {
+        color: #007bff; /* Azul mais vibrante */
+        transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+        transition: all 0.3s ease; /* Animação suave */
+    }
+        
+
+    .card-body {
+        flex: 1; /* Preenche o espaço disponível */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Garante que o botão fique sempre na base */
+    }
+    
+    .card-text {
+        min-height: 80px; /* Ajuste conforme necessário */
+    }
+
+
+
     .card {
         width: 300px;              /* Defina uma largura fixa ou relativa */
         margin-bottom: 20px;       /* Espaçamento entre os cards */
@@ -111,6 +140,10 @@
         border: 1px solid #ddd;
         padding: 20px;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 95%; /* Faz os cards terem a mesma altura */
     }
     
     #first-card{
