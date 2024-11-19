@@ -14,15 +14,29 @@
   </head>
   <body>
 
-    <div id="navbar-placeholder"></div>
 
-  
+      <!--start header-->
+<header>
+  <div class="header-content">
+      <h1 >SPORTZONE</h1> 
+  </div>
+  <div class="icons">
+      <a href="/assets/html/login.html"><i class="fa-solid fa-user"></i></a>
+      <a href="/assets/html/telaConfig.html"><i class="fa-solid fa-gear"></i></a>
+      <a href="/assets/home.html"><i class="fa-solid fa-house"></i></a>
+  </div>
   <div class="search-bar">
     <form onsubmit="searchProducts(); return false;">
       <input type="search" id="searchInput" placeholder="Pesquise Aqui...">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
+  
+</header> <!--end of header-->
+ 
+
+  
+ 
   <!--end of header-->
 
   <div class="container my-5">
@@ -30,131 +44,187 @@
 
     <div class="row">
       <!-- Cards de Produtos com Favoritar -->
-      <div class="col-md-4 product-card" data-name="Camisa Azul">
-        <div class="card bg-light">
-          <img src="/assets/img/Camisas/camisacorinthians24_25jogador1.png" class="card-img-top" alt="Camisa Azul">
+      <div class="col-md-4 product-card" data-name="Camisa Corinthians">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Corinthians">
           <div class="card-body">
-            <h5 class="card-title">Camisa Azul</h5>
-            <p class="card-price">Preço: R$ 150,00</p>
-            <p class="card-description">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual.</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-          </div>
-          
-        </div>
-      </div>
-      <div class="col-md-4 product-card" data-name="Camisa Vermelha">
-        <div class="card bg-light">
-          <img src="/assets/img/Camisas/camisa aston villa.png" class="card-img-top" alt="Camisa Vermelha">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Vermelha</h5>
-            <p class="card-text">Preço: R$ 200,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-primary font-weight-bold" style="font-size: 1.3rem;">Camisa Corinthians</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Bege">
-        <div class="card bg-light">
-          <img src="/assets/img/Camisas/camisa milan retro.png" class="card-img-top" alt="Camisa Bege">
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
           <div class="card-body">
-            <h5 class="card-title">Camisa Bege</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa Palmeiras 24/25 Jogador II</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      
+      <div class="col-md-4 product-card" data-name="Camisa Santos">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisasantos1jogador24_25.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador I">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-dark font-weight-bold" style="font-size: 1.3rem;">Camisa Santos</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 180,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">A camisa do Peixe para você arrasar nos jogos ou no seu look do dia a dia.</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Aproveite o poder do Santos em cada detalhe!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      <!-- Cards de Produtos com Favoritar -->
+      <div class="col-md-4 product-card" data-name="Camisa Corinthians">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Corinthians">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-primary font-weight-bold" style="font-size: 1.3rem;">Camisa Corinthians</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa Palmeiras 24/25 Jogador II</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      
+      <div class="col-md-4 product-card" data-name="Camisa Santos">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisasantos1jogador24_25.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador I">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-dark font-weight-bold" style="font-size: 1.3rem;">Camisa Santos</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 180,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">A camisa do Peixe para você arrasar nos jogos ou no seu look do dia a dia.</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Aproveite o poder do Santos em cada detalhe!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      <!-- Cards de Produtos com Favoritar -->
+      <div class="col-md-4 product-card" data-name="Camisa Corinthians">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Corinthians">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-primary font-weight-bold" style="font-size: 1.3rem;">Camisa Corinthians</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa Palmeiras 24/25 Jogador II</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      
+      <div class="col-md-4 product-card" data-name="Camisa Santos">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisasantos1jogador24_25.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador I">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-dark font-weight-bold" style="font-size: 1.3rem;">Camisa Santos</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 180,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">A camisa do Peixe para você arrasar nos jogos ou no seu look do dia a dia.</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Aproveite o poder do Santos em cada detalhe!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      <!-- Cards de Produtos com Favoritar -->
+      <div class="col-md-4 product-card" data-name="Camisa Corinthians">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Corinthians">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-primary font-weight-bold" style="font-size: 1.3rem;">Camisa Corinthians</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 product-card" data-name="Camisa Verde">
-        <div class="card bg-light">
-          <img src="/assets/img/CamisaCorinthians/frente.png" class="card-img-top" alt="Camisa Verde">
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
           <div class="card-body">
-            <h5 class="card-title">Camisa Verde</h5>
-            <p class="card-text">Preço: R$ 180,00</p>
-            <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa Palmeiras 24/25 Jogador II</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
           </div>
         </div>
       </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Santos">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisasantos1jogador24_25.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador I">
+          <div class="card-body">
+            <h5 class="card-title text-dark font-weight-bold" style="font-size: 1.3rem;">Camisa Santos</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 180,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" style="font-size: 1.7rem; color: #ff4757; transition: color 0.3s;"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">A camisa do Peixe para você arrasar nos jogos ou no seu look do dia a dia.</p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Aproveite o poder do Santos em cada detalhe!</p>
+          </div>
+        </div>
+      </div>
+      
     </div>
-
-
   </div>
 
 
@@ -162,22 +232,7 @@
   <div id="footer"></div>
 
 
-      <!-- Navbar Script -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao carregar a navbar: ' + response.status);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error(error));
-        });
-    </script>
+    
     
     <!-- Footer Script -->
     <script>

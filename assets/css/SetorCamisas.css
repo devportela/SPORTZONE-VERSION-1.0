@@ -2,29 +2,422 @@ body {
   background-color: #f0f8ff;
   font-family: 'Poppins', sans-serif;
 }
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e0e0e0;
-  border-radius: 15px;
+
+
+/* Header start */
+header {
+  background-color: #0f1ef1; /* Cor corrigida */
+  height: 60px;
+  border-bottom: 3px solid #00008b;
+  display: flex;
+  justify-content: space-between; /* Espaça o conteúdo */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 0 20px; /* Espaçamento interno do cabeçalho */
+  box-shadow: 0 4px 2px -2px gray; /* Sombra para dar destaque */
+  margin-bottom: 0;
 }
-.card:hover {
+
+header .header-content h1 {
+  margin: 0;
+  color: white; /* Texto do título em branco */
+}
+
+header i {
+  color: white; /* Mantém os ícones visíveis */
+  padding: 0 10px;
+  font-size: 30px; /* Ajuste do tamanho dos ícones */
+}
+
+header .icons,
+header .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .icons {
+  order: 2; /* Posicionar os ícones depois */
+}
+
+/* Header end */
+
+/* Search-bar start */
+header .search-bar form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 500px; /* Defina a largura completa aqui */
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+header .search-bar input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+  display: block; /* O campo de entrada será exibido diretamente */
+}
+
+header .fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #8c52ff;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+  background: #8c52ff; /* Cor de fundo do ícone */
+  color: white; /* Mantém o ícone branco */
+}
+
+header .search-bar {
+  margin-top: 60px;
+}
+/* Search-bar end */
+
+/* subheader start */
+
+.container {
+  margin-bottom: 50px;
+  margin-left: 163px;
+}
+
+.navbar {
+  border-bottom: 2px solid #0f1ef1; /* Adiciona uma borda na parte inferior do subcabeçalho */
+  margin-top: 0;
+  height: 50px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.navbar-nav .nav-link {
+  display: flex; /* Configura os links como flex containers */
+  align-items: center; /* Centraliza verticalmente ícone e texto */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  font-weight: 600; /* Aumenta o peso da fonte */
+  color: #0f1ef1; /* Cor personalizada dos links */
+  transition: color 0.3s; /* Transição suave para a cor */
+  padding: 10px; /* Ajusta o espaçamento interno */
+  margin-top: 50px;
+}
+
+.navbar-nav .nav-link i {
+  margin-right: 8px; /* Adiciona um pequeno espaço entre o ícone e o texto */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* subheader end */
+
+
+
+ 
+.product-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+.product-card .card-body {
+  padding: 20px;
+}
+
+.favorite-btn:hover {
+  color: #e74c3c; /* Cor mais intensa ao passar o mouse */
+}
+
+.card-price::before {
+  content: "💰 "; /* Ícone de preço */
+  margin-right: 5px;
+}
+
+.card-description {
+  margin-top: 10px;
+  color: #555;
+}
+
+.card-price {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-title {
+  color: #333;
+}
+
+.tagline {
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #27ae60;
+  font-style: italic;
+}
+body {
+  background-color: #f0f8ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header start */
+header {
+  background-color: #0f1ef1; 
+  height: 60px;
+  border-bottom: 3px solid #00008b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 2px -2px gray;
+  margin-bottom: 0;
+}
+
+header .header-content h1 {
+  margin: 0;
+  color: white;
+}
+
+header i {
+  color: white;
+  padding: 0 10px;
+  font-size: 30px;
+}
+
+header .icons,
+header .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .icons {
+  order: 2;
+}
+
+header .search-bar form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+header .search-bar input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+header .fa {
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #8c52ff;
+  text-align: center;
+  font-size: 1.2em;
+  background: #8c52ff;
+  color: white;
+}
+
+header .search-bar {
+  margin-top: 60px;
+}
+
+/* Subheader styles */
+.container {
+  margin-bottom: 50px;
+  margin-left: 163px;
+}
+
+.navbar {
+  border-bottom: 2px solid #0f1ef1;
+  margin-top: 0;
+  height: 50px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: #0f1ef1;
+  transition: color 0.3s;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.navbar-nav .nav-link i {
+  margin-right: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+/* Product card styles */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.card {
+  height: 600px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+  height: 700px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95));
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: #27ae60;
+  font-style: italic;
+}
+
 .favorite-btn {
-  color: #ff6347;
-  cursor: pointer;
+  font-size: 1.7rem; /* Tamanho do ícone */
+  color: #ff4757; /* Cor padrão do ícone */
+  transition: color 0.3s; /* Efeito suave para a mudança de cor */
+}
+
+.favorite-btn.favorited {
+  color: #ff0000; /* Cor do ícone quando favoritado */
+}
+
+
+/* Hover effects for product cards */
+.product-card:hover .card {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Centering the cards in the row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-body .d-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+.col-md-4 {
+  flex: 1 1 calc(33.333% - 20px); /* Isso garante que cada item ocupe 1/3 da linha */
+  max-width: calc(33.333% - 20px); /* Define o máximo de largura de cada card */
+}
+
+
+.favorite-btn {
+  font-size: 1.5rem;
+  color: #ff4757;
   transition: color 0.3s;
 }
-.favorite-btn.favorited {
-  color: #ff0000;
-}
-h2 {
-  color: #007bff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+.product-card:hover .card {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+.card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 
+.card-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: #27ae60;
+  font-style: italic;
+}
 
 
 
