@@ -355,12 +355,15 @@ header .search-bar {
   font-size: 1.7rem; /* Tamanho do ícone */
   color: #ff4757; /* Cor padrão do ícone */
   transition: color 0.3s; /* Efeito suave para a mudança de cor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.favorite-btn.favorited {
-  color: #ff0000; /* Cor do ícone quando favoritado */
+.favorite-btn.active {
+  color: #ff0000;
+  font-weight: bold;
+  transition: color 0.3s;
 }
-
 
 /* Hover effects for product cards */
 .product-card:hover .card {
@@ -387,10 +390,24 @@ header .search-bar {
 
 
 .favorite-btn {
-  font-size: 1.5rem;
-  color: #ff4757;
-  transition: color 0.3s;
+  color: #ccc;
 }
+
+.favorite-btn.active {
+  color: #ff0000;
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .product-card:hover .card {
   transform: scale(1.05);

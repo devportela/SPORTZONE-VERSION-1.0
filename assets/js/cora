@@ -1,0 +1,20 @@
+function toggleFavorite(element) {
+    // Adiciona ou remove a classe "active" para indicar o estado do botão
+    element.classList.toggle('active');
+
+    // Obter o ID do produto relacionado (se necessário)
+    const productId = element.dataset.productId;
+
+    // Manipular favoritos no localStorage
+    if (productId) {
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        if (favorites.includes(productId)) {
+            // Remove dos favoritos
+            favorites = favorites.filter(id => id !== productId);
+        } else {
+            // Adiciona aos favoritos
+            favorites.push(productId);
+        }
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+}
