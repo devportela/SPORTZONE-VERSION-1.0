@@ -146,9 +146,7 @@ header .search-bar {
   padding: 20px;
 }
 
-.favorite-btn:hover {
-  color: #e74c3c; /* Cor mais intensa ao passar o mouse */
-}
+
 
 .card-price::before {
   content: "💰 "; /* Ícone de preço */
@@ -351,19 +349,7 @@ header .search-bar {
   font-style: italic;
 }
 
-.favorite-btn {
-  font-size: 1.7rem; /* Tamanho do ícone */
-  color: #ff4757; /* Cor padrão do ícone */
-  transition: color 0.3s; /* Efeito suave para a mudança de cor */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.favorite-btn.active {
-  color: #ff0000;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+
 
 /* Hover effects for product cards */
 .product-card:hover .card {
@@ -388,25 +374,6 @@ header .search-bar {
   max-width: calc(33.333% - 20px); /* Define o máximo de largura de cada card */
 }
 
-
-.favorite-btn {
-  color: #ccc;
-}
-
-.favorite-btn.active {
-  color: #ff0000;
-
-@keyframes heart-beat {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 
 .product-card:hover .card {
@@ -438,61 +405,24 @@ header .search-bar {
 
 
 
-
-
-/* search-bar */
-form {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 1s;
-    width: 500px; /* Defina a largura completa aqui */
-    height: 50px;
-    background: white;
-    box-sizing: border-box;
-    border-radius: 25px;
-    border: 4px solid white;
-    padding: 5px;
+/* Estilo base do botão */
+.favorite-btn {
+  font-size: 1.5rem; /* Tamanho do ícone */
+  color: #ccc; /* Cinza inicial para "não favoritado" */
+  cursor: pointer; /* Mostra que é clicável */
+  transition: color 0.3s ease, transform 0.2s ease; /* Transição suave para cor e zoom */
 }
 
-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 42.5px;
-    line-height: 30px;
-    outline: 0;
-    border: 0;
-    font-size: 1em;
-    border-radius: 20px;
-    padding: 0 20px;
-    display: block; /* O campo de entrada será exibido diretamente */
-    border: 1px solid lightblue;
+/* Estado "favoritado" */
+.favorite-btn.favorited {
+  color: #e63946; /* Vermelho vibrante para "favoritado" */
 }
 
-.fa {
-    box-sizing: border-box;
-    padding: 10px;
-    width: 42.5px;
-    height: 42.5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-    color: #8c52ff;
-    text-align: center;
-    font-size: 1.2em;
-    transition: all 1s;
-    background: #8c52ff; /* Cor de fundo do ícone já definida */
-    color: white;
+/* Efeito de hover */
+.favorite-btn:hover {
+  transform: scale(1.2); /* Aumenta levemente ao passar o mouse */
 }
 
-/* Remova o efeito de hover */
 
 
-.search-bar{
-    margin-top: 50px;
-}
-/*end search bar */
+

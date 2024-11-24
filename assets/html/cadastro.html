@@ -19,11 +19,20 @@
 </head>
 <body>
    
-<div id="navbar-placeholder"></div>
 
-
-
-
+   <!--start header-->
+    <header>
+        <div class="header-content">
+            <h1 >SPORTZONE</h1> 
+        </div>
+        <div class="icons">
+            <a href="/assets/home.html"><i class="fa-solid fa-house"></i></a>
+            <a href="/assets/html/login.html"><i class="fa-solid fa-user"></i></a>
+            <a href="/assets/html/telaConfig.html"><i class="fa-solid fa-gear"></i></a>
+        </div>
+       
+    </header> <!--end of header-->
+    
 
 
 <div class="box">  <form class="form text-center">
@@ -77,22 +86,7 @@
 
 <div id="footer"></div>
 
- <!-- Navbar Script -->
- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao carregar a navbar: ' + response.status);
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error(error));
-    });
-</script>
+
 
 <!-- Footer Script -->
 <script>

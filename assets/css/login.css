@@ -23,25 +23,152 @@ h1 {
   margin-top: 40px; /* Aumenta a distância entre o cabeçalho e a caixa de login */
 }
 
-
 header {
-  background-color: #0f1ef1ef;
+  background-color: #0f1ef1; /* Cor corrigida */
   height: 60px;
   border-bottom: 3px solid #00008B;
-}
-
-.header-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-margin-left: 90px;    
+  justify-content: space-between; /* Espaça o conteúdo */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 0 20px; /* Espaçamento interno do cabeçalho */
+      box-shadow: 0 4px 2px -2px gray;
+      margin-bottom: 0;
+
+  
 }
 
 .header-content h1 {
   margin: 0;
   color: white;
+
 }
+
+
+
+header i {
+  color: white; /* Mantém os ícones visíveis */
+  padding: 0 10px;
+  font-size: 30px;
+}
+
+
+
+
+.icons, .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons {
+  order: 2; /* Posicionar os ícones depois */
+}
+
+/* header end */
+
+
+/* subheader start */
+
+.container{
+  margin-bottom: 50px;
+  margin-left: 163px;
+
+  
+}
+
+.navbar {
+  border-bottom: 2px solid #0f1ef1; /* Adiciona uma borda na parte inferior do subcabeçalho */
+  margin-top: 0;
+  height: 50px;
+
+}
+
+
+
+.navbar-nav .nav-link {
+  font-weight: 600; /* Aumenta o peso da fonte */
+  color: #0f1ef1; /* Cor personalizada dos links */
+  transition: color 0.3s; /* Transição suave para a cor */
+  margin-top: 50px;
+  
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+}
+
+
+/* subheader end */
+
+    /* search-bar */
+     .search-bar form {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 1s;
+      width: 500px; /* Defina a largura completa aqui */
+      height: 50px;
+      background: white;
+      box-sizing: border-box;
+      border-radius: 25px;
+      border: 4px solid white;
+      padding: 5px;
+  }
+
+ .search-bar input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 42.5px;
+      line-height: 30px;
+      outline: 0;
+      border: 0;
+      font-size: 1em;
+      border-radius: 20px;
+      padding: 0 20px;
+      display: block; /* O campo de entrada será exibido diretamente */
+  }
+
+   .search-bar .fa {
+      box-sizing: border-box;
+      padding: 10px;
+      width: 42.5px;
+      height: 42.5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      color: #8c52ff;
+      text-align: center;
+      font-size: 1.2em;
+      transition: all 1s;
+      background: #8c52ff; /* Cor de fundo do ícone já definida */
+      color: white;
+  }
+
+  /* Remova o efeito de hover */
+
+
+  .search-bar{
+      margin-top: 50px;
+  }
+  /*end search bar */
+
+
+
+
+
+#box-container{
+ 
+    min-height: 100vh; /* Garante que a div ocupe pelo menos a altura da tela */
+    display: flex; /* Mantém o Flexbox ativo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+
 
 .login-container {
   background-color: #fff;
@@ -51,6 +178,11 @@ margin-left: 90px;
   width: 300px;
   text-align: center;
   
+}
+
+
+.box-login{
+  margin-top: 50px;
 }
 
 .login-container h2 {
@@ -84,14 +216,6 @@ button:hover {
   justify-content: space-between;
 }
 
-.links a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
 
 .login-box{
   position: absolute;
