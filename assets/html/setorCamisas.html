@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setor de CamisaS - SportZone</title>
+    <title>Setor de Camisas - SportZone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/img/logo/logo50x50.jpg" type="image/x-icon">
@@ -20,6 +20,7 @@
 
       <!--start header-->
 <header>
+
   
   <div class="header-content">
       <h1 >SPORTZONE</h1> 
@@ -28,7 +29,6 @@
       <a href="/assets/html/login.html"><i class="fa-solid fa-user"></i></a>
       <a href="/assets/html/telaConfig.html"><i class="fa-solid fa-gear"></i></a>
       <a href="/assets/home.html"><i class="fa-solid fa-house"></i></a>
-      <a href="/assets/html/favoritos.html">ola</a>
   </div>
   <div class="search-bar">
     <form onsubmit="searchProducts(); return false;">
@@ -42,216 +42,290 @@
 
  
   <!--end of header-->
+  
+<!-- Subheader -->
+ <div class="box-navbar">
+  <nav class="navbar navbar-expand-lg navbar-light  mb-0">
+      <div class="container justify-content-center">
+          <ul class="navbar-nav">
+              <li class="nav-item mx-3"> 
+                  <a class="nav-link" href="/assets/html/favoritos.html"><i class="fas fa-heart"></i> Favoritos</a>
+              </li>
+              <li class="nav-item mx-3">
+                  <a class="nav-link" href="/assets/html/setorCamisas.html"><i class="fas fa-tshirt"></i> Camisas</a>
+              </li>
+              <li class="nav-item mx-3">
+                  <a class="nav-link" href="/assets/html/setorShorts.html"><i class="fas fa-shorts"></i> Shorts</a>
+              </li>
+              <li class="nav-item mx-3">
+                  <a class="nav-link" href="/assets/html/setorTenis.html"><i class="fas fa-shoe-prints"></i> Tênis</a>
+              </li>
+              <li class="nav-item mx-3">
+          </ul>
+      </div>
+  </nav>
+  </div>
+  <!-- end Subheader -->
 
   <div class="container my-5">
-    <h2 class="text-center mb-4 display-4">Setor de Camisas</h2>
+    <h2 class="text-center mb-4 display-4 title-section">
+  <i class="fa-solid fa-tshirt icon-shirt"></i> Setor de Camisas <i class="fa-solid fa-tshirt icon-shirt"></i>
+</h2>
 
     <div class="row">
       <!-- Cards de Produtos com Favoritar -->
       <div class="col-md-4 product-card" data-name="Camisa Corinthians">
         <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Corinthians">
-          <div class="card-body">
-            <h5 class="card-title text-primary font-weight-bold" style="font-size: 1.3rem;">
-              <i class="fa-solid fa-tshirt icon-shirt"></i> <!-- Ícone de camisa -->
-              Camisa Corinthians Jogador III</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
-          <div class="card-body">
-            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
-              <i class="fa-solid fa-tshirt icon-shirt"></i> <!-- Ícone de camisa -->
-              Camisa Palmeiras 24/25 Jogador II</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Cards de Produtos com Favoritar -->
-     
-
-      <div class="col-md-4 product-card" data-name="Camisa Santos">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisasantos1jogador24_25.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador I">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador1.png" class="card-img-top" alt="Camisa Corinthians">
           <div class="card-body">
             <h5 class="card-title text-dark font-weight-bold" style="font-size: 1.3rem;">
-              <i class="fa-solid fa-tshirt icon-shirt"></i> <!-- Ícone de camisa -->Camisa Santos</h5>
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Corinthians 24/25 Jogador I
+            </h5>
             <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 180,00</p>
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 357,00</p>
               <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
             </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">A camisa do Peixe para você arrasar nos jogos ou no seu look do dia a dia.</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Aproveite o poder do Santos em cada detalhe!</p>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              A camisa Nike Corinthians I 2024/25 Jogador combina design profissional com tecnologia Dri-FIT, simbolizando a luta antirracista do clube!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              "Viva o Timão com a camisa Nike Corinthians I 2024/25: estilo, conforto e a luta estampados no manto!"
+            </p>
           </div>
         </div>
       </div>
       
-      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
-          <div class="card-body">
-            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa Palmeiras 24/25 Jogador II</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
-          </div>
-        </div>
-      </div>
-
-
-
       <div class="col-md-4 product-card" data-name="Camisa São Paulo">
         <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisasaopaulo_24_25jogador2.png" class="card-img-top" alt="Camisa São Paulo">
+          <img src="/assets/img/Camisas/camisasaopaulo_24_25jogador1.png" class="card-img-top" alt="Camisa São Paulo 24/25 Jogador I">
           <div class="card-body">
-            <h5 class="card-title bg-red text-primary font-weight-bold" style="font-size: 1.3rem;">
-              <i class="fa-solid fa-tshirt icon-shirt"></i> <!-- Ícone de camisa -->
-              Camisa São Paulo</h5>
+            <h5 class="card-title text-danger font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa São Paulo 24/25 Jogador I
+            </h5>
             <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
-              <i class="fa fa-heart favorite-btn " onclick="toggleFavorite(this)"></i>
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 330,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
             </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Camisa São Paulo 24/25 Jogador I: uniforme oficial com design moderno e performance ideal para torcedores e jogadores.
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              "Sinta a emoção do Tricolor Paulista em cada detalhe!"
+            </p>
           </div>
         </div>
       </div>
- 
-      
       
       <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
         <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
           <div class="card-body">
-            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa Palmeiras 24/25 Jogador II</h5>
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
             <div class="d-flex justify-content-between align-items-center">
               <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" ></i>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
             </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisasaopaulo_24_25jogador3.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
+        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+          <img src="/assets/img/Camisas/camisasantos2jogador24_25.png" class="card-img-top" alt="Camisa Palmeiras">
+          <div class="card-body">
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Palmeiras 24/25 Jogador I
+            </h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
+              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
+            </div>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
           </div>
         </div>
       </div>
       
       <div class="col-md-4 product-card" data-name="Camisa Santos">
         <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisasantos1jogador24_25.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador I">
+        <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador II">
           <div class="card-body">
-            <h5 class="card-title text-dark font-weight-bold" style="font-size: 1.3rem;">Camisa Santos</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 180,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">A camisa do Peixe para você arrasar nos jogos ou no seu look do dia a dia.</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Aproveite o poder do Santos em cada detalhe!</p>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="col-md-4 product-card" data-name="Camisa Corinthians">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Corinthians">
-          <div class="card-body">
-            <h5 class="card-title text-primary font-weight-bold" style="font-size: 1.3rem;">
-              <i class="fa-solid fa-tshirt icon-shirt"></i> <!-- Ícone de camisa -->
-              Camisa Corinthians</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" ></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
-          <div class="card-body">
-            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa Palmeiras 24/25 Jogador II</h5>
+            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">
+              <i class="fa-solid fa-tshirt icon-shirt"></i> Camisa Santos 24/25 Jogador II
+            </h5>
             <div class="d-flex justify-content-between align-items-center">
               <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
               <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
             </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
+            <p class="card-description text-muted" style="font-size: 0.95rem;">
+              Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!
+            </p>
+            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">
+              Viva a emoção do futebol com a camisa do campeão!
+            </p>
           </div>
         </div>
       </div>
       
-      <div class="col-md-4 product-card" data-name="Camisa Corinthians">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisacorinthians24_25jogador3.png" class="card-img-top" alt="Camisa Corinthians">
-          <div class="card-body">
-            <h5 class="card-title text-primary font-weight-bold" style="font-size: 1.3rem;">
-              <i class="fa-solid fa-tshirt icon-shirt"></i> <!-- Ícone de camisa -->
-              Camisa Corinthians</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 150,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Uma camisa leve e confortável, ideal para práticas esportivas ou uso casual. Mostre seu amor pelo Corinthians onde quer que vá!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Sua paixão pelo futebol, agora no seu estilo!</p>
-          </div>
-        </div>
-      </div>
- 
-      <div class="col-md-4 product-card" data-name="Camisa Santos">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisasantos1jogador24_25.png" class="card-img-top" alt="Camisa Santos 24/25 Jogador I">
-          <div class="card-body">
-            <h5 class="card-title text-dark font-weight-bold" style="font-size: 1.3rem;">Camisa Santos</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 180,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)" ></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">A camisa do Peixe para você arrasar nos jogos ou no seu look do dia a dia.</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Aproveite o poder do Santos em cada detalhe!</p>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="col-md-4 product-card" data-name="Camisa Palmeiras">
-        <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
-          <img src="/assets/img/Camisas/camisapalmeiras24_25jogador2.png" class="card-img-top" alt="Camisa Palmeiras">
-          <div class="card-body">
-            <h5 class="card-title text-success font-weight-bold" style="font-size: 1.3rem;">Camisa santos 24/25 Jogador II</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="card-price text-danger" style="font-size: 1.2rem; font-weight: bold;">R$ 200,00</p>
-              <i class="fa fa-heart favorite-btn" onclick="toggleFavorite(this)"></i>
-            </div>
-            <p class="card-description text-muted" style="font-size: 0.95rem;">Mostre a força do Verdão com essa camisa exclusiva. Perfeita para o seu estilo e paixão pelo time!</p>
-            <p class="tagline text-success font-italic" style="font-size: 0.85rem;">Viva a emoção do futebol com a camisa do campeão!</p>
-          </div>
-        </div>
-      </div>
-
-
-
 
 
 

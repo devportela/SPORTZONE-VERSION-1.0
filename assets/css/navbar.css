@@ -11,6 +11,8 @@ header {
   margin-bottom: 0;
 }
 
+
+
 header .header-content h1 {
   margin: 0;
   color: white; /* Texto do título em branco */
@@ -86,6 +88,16 @@ header .fa {
 header .search-bar {
   margin-top: 60px;
 }
+
+img{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  
+  border-radius: 50%;
+}
+
+
 /* Search-bar end */
 
 /* subheader start */

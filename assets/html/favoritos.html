@@ -54,16 +54,51 @@
 <!-- end Subheader -->
 
   <div class="container my-5">
-    <h2 class="text-center mb-4">Favoritos</h2>
-    <button id="clear-favorites" onclick="clearFavorites()" class="btn-clear-favorites">
-        Limpar Favoritos
-      </button>
+    <div class="favorites-header">
+      <h2>Seus Favoritos</h2>
+      <button id="clear-favorites-btn" class="btn btn-danger">Limpar Favoritos</button>
+    </div>
+    
       
     <div id="favorites-container" class="row g-4">
       <!-- Os favoritos serão exibidos aqui -->
     </div>
   </div>
 
+
+
+
+    <script>
+        // Função para carregar os favoritos da localStorage
+      function loadFavorites() {
+        const favoritesContainer = document.getElementById("favorites-container");
+        const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+        favoritesContainer.innerHTML = favoritos.length
+          ? favoritos.map(item => `
+            <div class="col-md-4 product-card">
+              <div class="card bg-light shadow-lg rounded-lg overflow-hidden">
+                <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-description">${item.description}</p>
+                </div>
+              </div>
+            </div>`).join("")
+          : "<p>Você não tem nenhum favorito no momento.</p>";
+      }
+
+      // Função para limpar os favoritos
+      document.getElementById("clear-favorites-btn").addEventListener("click", () => {
+        if (confirm("Tem certeza que deseja limpar todos os favoritos?")) {
+          // Limpa os favoritos do localStorage
+          localStorage.removeItem("favoritos");
+          loadFavorites(); // Atualiza a tela
+        }
+      });
+
+      // Carregar favoritos quando a página for carregada
+      loadFavorites();
+    </script>
   <script src="/assets/js/favoritos.js"></script>
 </body>
 </html>
