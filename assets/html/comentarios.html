@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="/assets/css/comentarios.css">
 </head>
 <body>
-    <header>
-        <div class="box-navbar">
+
+
+<div id="navbar-placeholder"></div>
+    
+<div class="box-navbar">
     <nav class="navbar navbar-expand-lg navbar-light  mb-0">
         <div class="container justify-content-center">
             <ul class="navbar-nav">
@@ -35,16 +38,8 @@
             </ul>
         </div>
     </nav>
-    </div>
-<header>
-    <div class="header-content">
-        <h1>SPORTZONE</h1>
-        <a href="/assets/home.html" class="home-link">
-            <i class="fa-solid fa-arrow-right"></i> Voltar para Home
-        </a>
-    </div>
-</header>
-    </header>
+
+
     <main>
         <section class="product">
             <div class="product-details">
@@ -515,6 +510,26 @@
         <p>&copy; 2024 SportZone. Todos os direitos reservados. <a href="#">Termos de Uso</a> | <a href="#">Política de Cookies</a></p>
     </div>
 </footer>
+
+
+
+        <!-- Navbar Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('/assets/html/navbar.html') // Certifique-se que o caminho do arquivo navbar.html está correto
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar a navbar: ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error(error));
+            });
+        </script>
+
  
     <script src="/assets/js/comentarios.js"></script>
 </body>
