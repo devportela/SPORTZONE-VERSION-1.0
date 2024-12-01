@@ -53,7 +53,39 @@ header i {
 
 
 
+  
 
+    /* subheader start */
+
+    .container{
+      margin-bottom: 50px;
+      margin-left: 163px;
+      
+  }
+
+  .navbar {
+      border-bottom: 2px solid #0f1ef1; /* Adiciona uma borda na parte inferior do subcabeçalho */
+      margin-top: 0;
+      height: 50px;
+
+  }
+
+
+  
+  .navbar-nav .nav-link {
+      font-weight: 600; /* Aumenta o peso da fonte */
+      color: #0f1ef1; /* Cor personalizada dos links */
+      transition: color 0.3s; /* Transição suave para a cor */
+      margin-top: 50px;
+      
+  }
+  
+  .navbar-nav .nav-link:hover {
+      color: #007bff; /* Cor ao passar o mouse */
+  }
+
+
+  /* subheader end */
 
 
 form {
