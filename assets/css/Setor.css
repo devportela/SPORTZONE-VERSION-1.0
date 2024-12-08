@@ -136,6 +136,8 @@ body {
   
   
    
+
+
   .product-card:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -145,6 +147,7 @@ body {
   .product-card .card-body {
     padding: 20px;
   }
+
   
   
   
@@ -181,6 +184,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin: 10px 0;
+    width: 500px;
   }
   
   .card {
@@ -195,7 +199,8 @@ body {
   }
   
   .card-img-top {
-    height: 700px;
+    height: auto;
+    width: 100%;
     object-fit: cover;
   }
   
