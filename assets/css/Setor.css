@@ -42,7 +42,7 @@ body {
   /* Header end */
   
   /* Search-bar start */
-  header .search-bar form {
+   .search-bar form {
     position: relative;
     top: 50%;
     left: 50%;
@@ -57,7 +57,7 @@ body {
     padding: 5px;
   }
   
-  header .search-bar input {
+  .search-bar input {
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +72,7 @@ body {
     display: block; /* O campo de entrada será exibido diretamente */
   }
   
-  header .fa {
+   .search-bar .fa {
     box-sizing: border-box;
     padding: 10px;
     width: 42.5px;
@@ -89,7 +89,7 @@ body {
     color: white; /* Mantém o ícone branco */
   }
   
-  header .search-bar {
+   .search-bar {
     margin-top: 60px;
   }
   /* Search-bar end */

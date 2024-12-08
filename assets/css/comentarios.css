@@ -2,30 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #d6c8ff;
-}
+    
 
 
-.menu-icon, .search-icon {
-    font-size: 24px;
-}
 
 h1 {
     font-size: 24px;
     font-weight: bold;
 }
 
+
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  /* Alinha o conteúdo centralizado horizontalmente */
+    min-height: 100vh;    /* Garante que o corpo ocupe a altura inteira da tela */
     width: 100%;
     max-width: 800px;
     padding: 20px;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    flex-grow: 1;   /* Faz com que o conteúdo ocupe o espaço restante */}
 
 .product {
     display: flex;
@@ -78,7 +78,6 @@ main {
     font-size: 24px;
     color: gray;
     cursor: pointer;
-    margin-left: 88px;
 }
 
 .star-rating span.active,
@@ -119,26 +118,52 @@ main {
     font-size: 14px;
     margin-bottom: 5px;
 }
-.comment img{
+
+.comment img {
     width: 20px;
     height: auto;
 }
-button{
+
+button {
     width: 50px;
     height: 30px;
     background-color: orange;
 }
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
 footer {
     background-color: #0f1ef1; /* Azul escuro predominante */
     color: white;
     padding: 60px 0;
     font-family: Arial, sans-serif;
+    text-align: center; /* Isso vai centralizar o conteúdo dentro do footer */
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza as colunas do footer */
     gap: 30px;
     padding: 0 50px;
 }
@@ -146,6 +171,7 @@ footer {
 .footer-column {
     flex: 1;
     min-width: 220px;
+    text-align: left; /* Garante que os textos fiquem alinhados à esquerda dentro de cada coluna */
 }
 
 .footer-column h5 {
@@ -186,6 +212,7 @@ footer {
 .footer-social-icons {
     display: flex;
     gap: 15px;
+    justify-content: center; /* Centraliza os ícones sociais */
 }
 
 .footer-social-icons a {
@@ -211,6 +238,7 @@ footer {
 .footer-column .subscribe-form {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Alinha o formulário ao centro */
 }
 
 .subscribe-form input[type="email"] {
@@ -220,6 +248,8 @@ footer {
     border-radius: 5px;
     font-size: 16px;
     background-color: #e6e6e6;
+    width: 100%;
+    max-width: 300px; /* Garante que o input tenha uma largura ideal */
 }
 
 .subscribe-form input[type="submit"] {
@@ -269,5 +299,3 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
-]
-
